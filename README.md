@@ -74,3 +74,10 @@ await window.web3.eth.sendTransaction({
     to: '0x601D70A2fFAC4C90A3D4c4931564EE3d857d39F8',
     data: '0xdd365b8b'
 })
+
+
+### challenge 8
+
+This will give you the pass:
+
+await window.web3.eth.getStorageAt(contract.address,1)
