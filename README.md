@@ -116,3 +116,10 @@ contract Attacker {
     }
 }
 ```
+
+### challenge 12
+
+pretty easy to read out the storage.
+
+for whatever reason metamask would change my input data which took me one hour to figure out. works with remix.
+
