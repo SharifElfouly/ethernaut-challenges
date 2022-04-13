@@ -154,3 +154,7 @@ contract Attacker {
   }
 }
 ```
+
+### challenge 17
+
+cheated by getting the contract address from etherscan (lol). correct way would be to get the account address (its deterministic) from `keccack256(address, nonce)` than I simply selfdestructed the contract.
