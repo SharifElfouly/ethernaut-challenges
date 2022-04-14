@@ -158,3 +158,11 @@ contract Attacker {
 ### challenge 17
 
 cheated by getting the contract address from etherscan (lol). correct way would be to get the account address (its deterministic) from `keccack256(address, nonce)` than I simply selfdestructed the contract.
+
+### challenge 18
+
+You have to create bytecode (for contract creation) that will create bytecode that returns 42. Do not forget evm is big endian!
+
+```
+6060600053602A600153606060025360006003536052600453606060055360206006536060600753600060085360F3600953600A6000F3
+```
