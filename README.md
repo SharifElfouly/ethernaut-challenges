@@ -166,3 +166,16 @@ You have to create bytecode (for contract creation) that will create bytecode th
 ```
 6060600053602A600153606060025360006003536052600453606060055360206006536060600753600060085360F3600953600A6000F3
 ```
+
+### challenge 20
+
+```
+pragma solidity ^0.6.0;
+
+contract Partner {
+  
+  fallback() external payable {
+    assert(false);
+  }
+}
+```
