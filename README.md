@@ -213,3 +213,8 @@ contract Buyer {
 }
 ```
 
+### challenge 19
+
+Wow, this was the most fun so far.
+You have to exploit the array underflow. That allows you to write to any storage address of the contract. Super powerful stuff.
+Good thing that you can not manipulate array length after solidity 0.6 anymore.
