@@ -1,5 +1,7 @@
 # ethernaut-challenges
 
+Ethernaut is a list of smart contract - find the exploit - challenges: https://ethernaut.openzeppelin.com/
+
 ### challenge 1
 await contract.contribute({value: toWei("0.000001")})
 
